@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section.clase-1 p {
+        color: red;
+    }
+
+    section.clase-2 p:first-child {
+        color: brown;
+    }
+
+    section.clase-2 p:nth-child(2n) {
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    section.clase-2 p:last-child {
+        color: orange;
+    }
+
+    section.clase-2 p::first-letter {
+        font-size: 24px;
+    }
+
+    section.clase-3 .caja1 {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        background-color: #DEEDF0;
+        padding: 20px;
+        border: 2px solid #F4C7AB;
+        margin: 10px 20px 30px 40px;
+    }
+
+    section.clase-3 .caja2 {
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        background-color: #B2B8A3;
+        /* border: 2px solid #B2B8A3; */
+    }
+
+    body {
+        margin: 0px;
+    }
+</style>
+
+<body>
+    <section class="clase-1">
+        <p>Hola Mundo feliz</p>
+        <p>Hola Mundo</p>
+    </section>
+    <hr>
+    <section class="clase-2">
+        <p>🐶 Perro</p>
+        <p>🐱 Gato</p>
+        <p>🐸 Rana</p>
+        <p>Dodo</p>
+        <p>🦜 Loro</p>
+    </section>
+    <hr>
+    <section class="clase-3">
+        <!-- https://colorhunt.co/palette/fff5ebdeedf0f4c7abb2b8a3 -->
+        <div class="caja1"></div>
+        <div class="caja2"></div>
+    </section>
+</body>
+
+</html>
