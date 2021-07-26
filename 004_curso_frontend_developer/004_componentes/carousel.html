@@ -11,11 +11,66 @@
     body {
         margin: 0px
     }
+
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+
+        /*todos los elementos que se situen dentro de este elemento, 
+        se posicionarán en relación a él mismo*/
+        position: relative;
+    }
+
+    .carousel__container {
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel__item {
+        background-color: palevioletred;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right:10px;
+
+        display: inline-block;
+
+        cursor: pointer;
+        transition: 450ms all;
+    }
+
+    .carousel__item:hover ~ .carousel__item {
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel__item {
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel__item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
 </style>
 
 <body>
 <section class="carousel">
-
+    <div class="carousel__container">
+        <div class="carousel__item">
+            
+        </div>
+        
+        <div class="carousel__item">
+            
+        </div>
+        
+        <div class="carousel__item">
+            
+        </div>
+    </div>
 </section>
 </body>
 
