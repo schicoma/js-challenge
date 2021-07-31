@@ -61,7 +61,7 @@ var articulosFiltrados = articulos.filter(function (articulo) {
     return articulo.precio <= 400
 });
 
-console.log(articulosFiltrados);
+console.log(1, articulosFiltrados);
 
 // (2) map
 
@@ -69,4 +69,28 @@ var nombreArticulos = articulos.map(function (articulo) {
     return articulo.nombre
 });
 
-console.log(nombreArticulos);
+console.log(2, nombreArticulos);
+
+// (3) find
+
+var articuloEncontrado = articulos.find(function(articulo) {
+    return articulo.nombre === 'Laptop'
+});
+
+console.log(3, articuloEncontrado);
+
+// (4) forEach
+
+articulos.forEach(function(articulo) {
+    console.log(4, articulo.nombre);
+});
+
+// (5) some
+
+var articulosBaratos = articulos.some(function(articulo) {
+    return articulo.precio <= 300
+});
+
+// si hay algun artículo barato (precio <= 300), devuelve true
+
+console.log(5, articulosBaratos);
