@@ -1,0 +1,8 @@
+.triangle-section label {
+    display: block;
+}
+
+.triangle-section label span {
+    display: inline-block;
+    min-width: 380px;
+}
