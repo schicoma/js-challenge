@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1 | Curso Práctico de JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Altura de un triángulo isósceles.</h1>
+        <p>
+            Ejercicio para calcular la altura de un triángulo isósceles.
+        </p>
+    </header>
+
+    <section class="triangle-section">
+        <h2>Calcula el área y perímetro de un triángulo</h2>
+        <form>
+            <label for="InputTrianguloLado1">
+                <span>Escribe cuánto mide el primer lado de tu triángulo:</span>
+                <input type="number" id="InputTrianguloLado1">
+            </label>
+
+            <label for="InputTrianguloLado2">
+                <span>Escribe cuánto mide el segundo lado de tu triángulo:</span>
+                <input type="number" id="InputTrianguloLado2">
+            </label>
+
+            <label for="InputTrianguloLado3">
+                <span>Escribe cuánto mide el tercer lado de tu triángulo:</span>
+                <input type="number" id="InputTrianguloLado3">
+            </label>
+
+            <button type="button" id="calcularAltura" onclick="calcularAlturaTriangulo()">
+                Calcular altura
+            </button>
+        </form>
+    </section>
+    
+    <script src="./reto.js"></script>
+</body>
+
+</html>
