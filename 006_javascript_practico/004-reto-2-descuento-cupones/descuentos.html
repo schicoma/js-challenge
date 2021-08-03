@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porcentajes y descuentos | Curso práctico de JavaScript</title>
+    <title>Porcentajes y descuentos (Reto) | Curso práctico de JavaScript</title>
 </head>
 
 <body>
     <header>
         <h1>Porcentajes y descuentos</h1>
-        <p>Este es el segundo taller del curso práctico de JavaScript</p>
     </header>
 
     <section>
@@ -23,8 +22,8 @@
                 <input type="number" id="InputPrice">
             </label>
             <label for="InputDiscount">
-                <span>Escribe el descuento</span>
-                <input type="number" id="InputDiscount">
+                <span>Escribe el cupón de descuento</span>
+                <input type="text" id="InputCoupon" maxlength="8">
             </label>
             <button type="button" onclick="getPriceWithDiscount()">
                 Calcular el precio con descuento
