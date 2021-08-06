@@ -65,3 +65,9 @@ section h1 {
     box-shadow: none;
     border: 1px solid #dbdbdb;
 }
+
+@media (max-width: 600px) {
+    section {
+        width: 300px;
+    }
+}
