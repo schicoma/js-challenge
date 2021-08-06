@@ -20,3 +20,7 @@
 - 2️⃣ Segundo paso: Implementar las fórmulas en JS
 - 3️⃣ Tercer paso: Crear funciones para encapsular el cálculo de la media, mediana y moda.
 - 4️⃣ Cuarto paso: Integrar JavaScript con HTML
+
+## Reto
+
+![Screenshot](007-reto-analisis-financiero/screenshot.png)

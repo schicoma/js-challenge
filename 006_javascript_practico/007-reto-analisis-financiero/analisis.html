@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de cuotas | Curso Práctico de JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./analisis.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section class="section-form">
+            <h1>Cálculo de cuotas</h1>
+            <form action="">
+                <label for="purchaseAmount">
+                    <span>Monto de la compra:</span>
+                    <input type="number" name="purchaseAmount" id="purchaseAmount">
+                </label>
+                <label for="interesRate">
+                    <span>TEA (Tarjeta de crédito):</span>
+                    <input type="number" name="interesRate" id="interesRate">
+                </label>
+                <label for="instalments">
+                    <span>Cantidad de cuotas:</span>
+                    <input type="number" name="instalments" id="instalments">
+                </label>
+                <button type="button" onclick="calculate()">Calcular</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Resultado</h1>
+            <p id="result"></p>
+        </section>
+    </main>
+
+    <script src="./analisis.js"></script>
+</body>
+
+</html>
