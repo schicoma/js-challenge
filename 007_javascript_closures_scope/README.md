@@ -9,3 +9,6 @@ Este proyecto tiene ejercicios donde he aprendido conceptos fundamentales y gene
 ## Comandos
 
 - '''npm init'''
+
+## Bonus
+El keyword '''debugger''' permite habilitar el modo debug en un punto en específico de nuestro código
