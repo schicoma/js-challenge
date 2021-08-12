@@ -1,3 +1,5 @@
+// ES6 en 2015
+
 /**
  * 
  * Parámetros por defecto
@@ -120,16 +122,15 @@ const a = 'b';
 // ------------------------------------------------------------------------------------------
 
 
-
 /**
  * Inicializador de objetos en ES6
  */
 
-let name = 'Sebastian';
-let age = 24;
+let name2 = 'Sebastian';
+let age2 = 24;
 
-obj = { name: name, age: age }; //es5
-obj2 = { name, age }; //es6 o es2015
+obj = { name: name2, age: age2 }; //es5
+obj2 = { name2, age2 }; //es6 o es2015
 
 console.log('es5', obj);
 console.log('es6', obj);
@@ -148,8 +149,6 @@ const names = [
 ];
 
 let listOfNames = names.map(function (item) { // función anónima
-    console.log(this.obj2);
-    console.log(this.item);
     return item.name
 });
 
@@ -195,6 +194,35 @@ helloPromise()
     .catch((error) => {
         console.log(error);
     })
+
+    // In ES9
     .finally(_ => {
         console.log('Finally');
     });
+
+
+// ---------------------
+
+class calculator {
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+    sumar(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sumar(3, 2));
+
+// import de ES6 aún no es una sintaxis oficial
+// en NodeJs, al tratar de correrlo nos arrojará un error
+// import { helloFromModule } from './module.js';
+
+const helloFromModule = require('./module');
+console.log(helloFromModule());
