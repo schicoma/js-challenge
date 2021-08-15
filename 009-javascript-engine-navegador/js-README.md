@@ -28,7 +28,7 @@ Google crea V8 para que Google Maps funcione rápido y estable, no solo en Chrom
 
 Node.js usa V8 para correr este lenguaje de programación en el backend (aplicaciones para servidores).
 
-## Clase 3
+## Clase 3 y 4
 
 ### ¿Cómo funciona?
 
@@ -49,13 +49,13 @@ Optimización de código, en este proceso ocurre el ```hoisting```
 * ### Compiler
 Retorna al **Interpreter** el código optimizado.
 
-## Clase 5
+## Clase 5 y 6
 
 ### Código de ejecución
 
-Comportamiento sincrónico (**Single Thread**) de JavaScript.
+Comportamiento sincrónico (**Single Thread**) de JavaScript. A continuación se listarán y definirán conceptos claves:
 
-#### Memory Heap
+* ### Memory Heap
 
 Teniendo el siguiente código:
 
@@ -67,11 +67,15 @@ Tenemos una variable declarada ```nombre``` e inicializada con el valor ```'Seba
 
 Analogía rápida: 'Repisa' para almacenar datos.
 
-#### Call Stack
+* ### Call Stack
 
 Pila de tareas (LIFO) a realizar de manera síncrona (**Single Thread*).
 
 ![Captura de pantalla 2021-08-15 130635](https://user-images.githubusercontent.com/14263134/129488206-063f52a4-ea4f-4df7-a30c-c0d4c7113d3e.jpg)
 
 En la imagen anterior se puede observar el comportamiento del Call Stack. Cada vez que se llama a una nueva función se agrega una tarea al stack. El último elemento es el Global Object.
+
+* ### Garbage Collection
+
+Mecanismo de JavaScript que verifica y marca aquellos elementos que ya no están siendo utilizados en tiempo de ejecución para ser eliminados. De esta manera se gestiona correctamente el uso de memoria en el navegador (o el servidor sea el caso de aplicaciones backend)
 
