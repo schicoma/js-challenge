@@ -1,4 +1,3 @@
-javascript-navegador
 # Curso de JavaScript Engine (V8) y el Navegador
 
 ## Clase 1
@@ -33,17 +32,42 @@ Node.js usa V8 para correr este lenguaje de programación en el backend (aplicac
 
 ### ¿Cómo funciona?
 
-Antes de la interpretación, se crea un entorno global (o '''window''') generando un **Global Object**, **this** (igual a window y el Global Object) y el **Outer environment**. Una vez creado estos 3 objetos, se ejecuta nuestro código (apilado en un stack dentro del **Execution Context**)
+Antes de la interpretación, se crea un entorno global (o ```window```) generando un **Global Object**, **this** (igual a window y el Global Object) y el **Outer environment**. Una vez creado estos 3 objetos, se ejecuta nuestro código (apilado en un stack dentro del **Execution Context**)
 
 Los pasos del interprete son:
 
 * ### Parser
 Análisis y convertimiento de un programa a un formato interno ideal para un ambiente de ejecución.
 * ### AST (Abstract syntax tree)
-Árbol de sintaxis (como un JSON) que representa la estructura sintáctica simplificada del código fuente
-Ver https://astexplorer.net/
+<p>Árbol de sintaxis (como un JSON) que representa la estructura sintáctica simplificada del código fuente </p>
+<p>Ver <a href="https://astexplorer.net/">AST Explorer</a></p>
+
 * ### Interpreter
 Retorna un bytecode a partir del árbol de sintaxis entregado.
-* ### Profile (Monitor)
-Optimización de código
+* ### Profiler (Monitor)
+Optimización de código, en este proceso ocurre el ```hoisting```
 * ### Compiler
+Retorna al **Interpreter** el código optimizado.
+
+## Clase 5
+
+### Código de ejecución
+
+Comportamiento sincrónico (**Single Thread**) de JavaScript.
+
+#### Memory Heap
+
+Teniendo el siguiente código:
+
+```javascript
+var nombre = 'Sebastian';
+```
+
+Tenemos una variable declarada ```nombre``` e inicializada con el valor ```'Sebastian'```. Los valores de las variables y las funciones se guardan en este espacio llamado **Memory Heap**, sin ningún orden en específico.
+
+Analogía rápida: 'Repisa' para almacenar datos.
+
+#### Call Stack
+
+Pila de tareas (LIFO) a realizar de manera síncrona (**Single Thread*).
+
