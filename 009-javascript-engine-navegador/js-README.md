@@ -71,3 +71,7 @@ Analogía rápida: 'Repisa' para almacenar datos.
 
 Pila de tareas (LIFO) a realizar de manera síncrona (**Single Thread*).
 
+![Captura de pantalla 2021-08-15 130635](https://user-images.githubusercontent.com/14263134/129488206-063f52a4-ea4f-4df7-a30c-c0d4c7113d3e.jpg)
+
+En la imagen anterior se puede observar el comportamiento del Call Stack. Cada vez que se llama a una nueva función se agrega una tarea al stack. El último elemento es el Global Object.
+
