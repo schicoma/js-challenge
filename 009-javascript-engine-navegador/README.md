@@ -79,3 +79,10 @@ En la imagen anterior se puede observar el comportamiento del Call Stack. Cada v
 
 Mecanismo de JavaScript que verifica y marca aquellos elementos que ya no están siendo utilizados en tiempo de ejecución para ser eliminados. De esta manera se gestiona correctamente el uso de memoria en el navegador (o el servidor sea el caso de aplicaciones backend)
 
+## Clase 7
+
+### Stack Overflow
+
+Error que aparece cuando la memoria del **Call Stack** sobrepasa lo permitido. Un caso común de este error es cuando la pila de llamadas supera debido a una recursión excesiva o infinita. En el caso anterior, se puede evitar haciendo cambios programáticos.
+
+Analogía: Ver logo de la plataforma Stack Overflow.
