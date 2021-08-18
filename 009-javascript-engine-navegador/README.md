@@ -120,7 +120,7 @@ Proceso encargado de enviar las funciones callback apiladas en el **Callback Que
 #### Ejemplo (*Comentario de Emerson Cedeño*)
 
 Hamburguesería:
-🍔 - Call Stack : El freidor principal (órdenes rápidas)
-👨‍🍳 - Web APIs : La cocina (ordenes más complejas)
-🍲 - Callback Queue : Ordenes preparadas por la cocina
-💁‍♂️ - Event loop : El mesero
+- 🍔 - Call Stack : El freidor principal (órdenes rápidas)
+- 👨‍🍳 - Web APIs : La cocina (ordenes más complejas)
+- 🍲 - Callback Queue : Ordenes preparadas por la cocina
+- 💁‍♂️ - Event loop : El mesero
