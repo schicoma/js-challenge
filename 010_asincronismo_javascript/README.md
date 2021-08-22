@@ -16,3 +16,9 @@ JavaScript sólo puede hacer una cosa a la vez, sin embargo; es capaz de delegar
 Como vimos en el curso de V8, el **Event Loop** y el **Callback Queue** son lose elementos que nos permiten realizar tareas asíncronas .
 
 <a href="https://www.youtube.com/watch?v=bWvnWhVCHAc">*No voy a bloquear el Event Loop*</a>
+
+## Proyecto
+
+### Dependencias
+
+- XMLHttpRequest
