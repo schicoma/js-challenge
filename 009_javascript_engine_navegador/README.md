@@ -79,6 +79,8 @@ En la imagen anterior se puede observar el comportamiento del Call Stack. Cada v
 
 Mecanismo de JavaScript que verifica y marca aquellos elementos que ya no están siendo utilizados en tiempo de ejecución para ser eliminados. De esta manera se gestiona correctamente el uso de memoria en el navegador (o el servidor sea el caso de aplicaciones backend)
 
+El algoritmo que utiliza es **Mark and Sweep**
+
 ## Clase 7
 
 ### Stack Overflow
@@ -86,3 +88,41 @@ Mecanismo de JavaScript que verifica y marca aquellos elementos que ya no están
 Error que aparece cuando la memoria del **Call Stack** sobrepasa lo permitido. Un caso común de este error es cuando la pila de llamadas supera debido a una recursión excesiva o infinita. En el caso anterior, se puede evitar haciendo cambios programáticos.
 
 Analogía: Ver logo de la plataforma Stack Overflow.
+
+## Clase 8
+
+### JS Runtime environment
+
+En la siguiente imagen se muestra los elementos que conforman el ambiente en tiempo de ejecución de JavaScript. Existen otros componentes como el **Event Loop** y el **Callback Stack** que nos permiten trabajar de manera asíncrona.
+
+![js-runtime-27c5fc01-b907-41b5-90e5-1d74d7371ec7](https://user-images.githubusercontent.com/14263134/129930266-e933dfad-88c8-4b78-b133-9566533bfc10.png)
+
+## Clase 9
+
+### Asincronismo
+
+Normalmente, el código de un programa determinado se ejecuta directamente, y solo sucede una cosa a la vez. Si una función se basa en el resultado de otra función, tiene que esperar a que la otra función termine y regrese, y hasta que eso suceda, todo el programa se detiene esencialmente desde la perspectiva del usuario.
+
+Por estas razones, muchas características de las Web API usan código asíncrono para ejecutarse, especialmente aquellas que buscana acceder o recolectar cierto tipo de informacion de un dispositivo externo (traer un archivo de la red), acceder a una base de datos y devolver información de allí, acceder a un streaming de video de una caámara web, entre otras tareas.
+
+Un video que ayuda a entender, con ejemplos incluído, los elementos con el que se logra la concurrencia en <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">JavaScript es What the heck is the event loop anyway?</a>.
+
+### Web APIs
+
+APIs del navegador para realizar tareas específicas, como por ejemplo: Manipulación de elementos HTML (DOM), peticiones a servicios HTTP (AJAX) o ejecuciones de código después de un determinado número de tiempo (Timeout).
+
+### Callback Queue
+
+Pila de funciones (FIFO) que guarda los callbacks enviados por las Web APIs.
+
+### Event Loop
+
+Proceso encargado de enviar las funciones callback apiladas en el **Callback Queue** al **Call Stack**. Verificará periodicamente que la pila de tareas esté vacía para enviar las funciones una por una.
+
+#### Ejemplo (*Comentario de Emerson Cedeño*)
+
+Hamburguesería:
+- 🍔 - Call Stack : El freidor principal (órdenes rápidas)
+- 👨‍🍳 - Web APIs : La cocina (ordenes más complejas)
+- 🍲 - Callback Queue : Ordenes preparadas por la cocina
+- 💁‍♂️ - Event loop : El mesero
