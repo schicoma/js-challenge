@@ -39,4 +39,5 @@ Un polyfill, como Babel, es requerido para que funcione en todos los navegadores
 
 ### Dependencias
 
-- XMLHttpRequest
+- XMLHttpRequest ```npm install xmlhttpreque
+st --save --registry https://registry.npmjs.com```
