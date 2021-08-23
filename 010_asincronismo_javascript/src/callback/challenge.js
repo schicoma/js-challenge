@@ -53,3 +53,4 @@ fetchData(API, function (error1, data1) {
 });
 
 // Evitar los *callbacks hells*, anidamientos de funciones (callbacks)
+// Más de 3 callbacks anidados
