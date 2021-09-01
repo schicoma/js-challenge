@@ -6,10 +6,7 @@ A pesar de que JS es un lenguaje *Single Thread*, posee propiedades para trabaja
 
 *La acción que no ocurre al mismo tiempo*
 
-> Según MDN Web Docs:
-<br/>
-El término **asíncrono** se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado. 
-
+> Según MDN Web Docs, el término **asíncrono** se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado. 
 
 JavaScript sólo puede hacer una cosa a la vez, sin embargo; es capaz de delegar la ejecución de ciertas funciones a otros procesos para que ciertas tareas sean procesadas en diferido. Este modelo de concurrencia se llama EventLoop.
 
@@ -39,5 +36,4 @@ Un polyfill, como Babel, es requerido para que funcione en todos los navegadores
 
 ### Dependencias
 
-- XMLHttpRequest ```npm install xmlhttpreque
-st --save --registry https://registry.npmjs.com```
+- XMLHttpRequest ```npm install xmlhttprequest --save --registry https://registry.npmjs.com```
