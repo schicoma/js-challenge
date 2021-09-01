@@ -1,0 +1,22 @@
+{
+  "name": "jsnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified in this little project\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "date-fns": "^2.23.0",
+    "webpack": "^5.51.1"
+  },
+  "optionalDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
