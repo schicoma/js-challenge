@@ -1,6 +1,6 @@
 {
   "name": "my-random-messages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mensajes aleatorios",
   "main": "src/index.js",
   "scripts": {
@@ -18,5 +18,14 @@
   "bin": {
     "random-messages": "./bin/global.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schicoma/js-challenge.git",
+    "directory": "011_gestion_dependencias_npm/random-messages"
+  },
+  "bugs": {
+    "url": "https://github.com/schicoma/js-challenge/issues"
+  },
+  "homepage": "https://github.com/schicoma/js-challenge/tree/main/011_gestion_dependencias_npm/random-messages#readme"
 }
