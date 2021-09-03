@@ -1,0 +1,22 @@
+{
+  "name": "my-random-messages",
+  "version": "1.0.0",
+  "description": "Mensajes aleatorios",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "messages",
+    "javascript",
+    "node",
+    "npm"
+  ],
+  "author": "Sebastian Chicoma Sandmann (https://github.com/schicoma)",
+  "license": "MIT",
+  "bin": {
+    "random-messages": "./bin/global.js"
+  },
+  "preferGlobal": true
+}
