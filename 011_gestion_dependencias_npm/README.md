@@ -134,3 +134,33 @@ Usar el comando ```npm audit``` para verificar que vulnerabilidades existen en n
 Para reparar dichas amenanzas o vulnerabilidades, usar el comando ```npm audit``` **```fix```**
 
 Opcional: [snyx](https://snyk.io/), proyecto que analiza vulnerabilidades.
+
+## Instalar un paquete
+
+### Pasos previos
+
+Agregar en el archivo **package.json** la siguiente configuración:
+
+```
+"bin": {
+  "random-messages": "./bin/global.js"
+},
+```
+
+```random-messages``` será el comando para ejecutar nuestro programa (se ejecutará el archivo **global.js**).
+
+### Instalación
+
+Para instalar un paquete en el repositorio local, ejecutar el comando ```npm link```. Una vez realizado esto, ejecutar el comando agregado en el **bin** (ejemplo: ```random-messages```). También, se puede lograr esto con el comando ```npm install -g [ruta raíz del proyecto]```
+
+Se creará un enlace simbólico en la carpeta global.
+
+### Subir módulo a registry 
+
+Crear una cuenta en [npmjs.com](https://npmjs.com). Luego ejecutar el comando ```npm adduser``` e ingresar los datos requeridos (credenciales en npmjs.com previamente creadas).
+
+Por último, ejecutar el comando ```npm publish``` para publicar nuestro módulo al [repositorio por defecto](https://registry.npmjs.com).
+
+### Actualizar módulo versión
+
+Para subir nuevos cambios al módulo, se debe ejecutar nuevamente el comando ```npm publish```. De ser necesario, ejecutar el comando ```npm version <major|minor|patch>``` para subir la versión de nuestro módulo.

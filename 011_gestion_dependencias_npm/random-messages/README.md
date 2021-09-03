@@ -6,17 +6,17 @@ Whenever I start a new project, I don't know what to write for the first commit.
 ## Install
 
 ```npm
-npm install -g random-msg
+npm install -g my-random-messages
 ```
 
 # Usage
 
 ```bash
-random-msg
+random-messages
 ```
 
 # Contributing
 If someone wants to add or improve something, I invite you to collaborate directly in this repository: [my-random-msg](https://github.com/schicoma/js-challenge/tree/main/011_gestion_dependencias_npm/random-messages)
 
 # License
-random-msg is released under the [MIT License](https://opensource.org/licenses/MIT).
+my-random-messages is released under the [MIT License](https://opensource.org/licenses/MIT).
