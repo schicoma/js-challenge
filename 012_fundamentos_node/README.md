@@ -71,3 +71,7 @@ Herramienta para ejecutar y recargar procesos de JavaScript; útil en desarrollo
 - **PM2** [https://pm2.keymetrics.io/](https://pm2.keymetrics.io/)
 
 Administrador de procesos para aplicaciones en Node.js, útil en ambientes de test y/o producción.
+
+## Cómo maneja la asíncronía
+
+*[Ir al curso de Asíncronismo con JavaScript](../010_asincronismo_javascript)*
