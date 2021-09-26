@@ -79,3 +79,11 @@ Administrador de procesos para aplicaciones en Node.js, útil en ambientes de te
 ## Stream y Buffer
 
 ***Stream*** es una utilidad que permite el manejo y la administración de gran cantidad de datos. Utiliza los ***Buffers***, objeos que permiten guardar datos binarios en secuencia de bytes.
+
+## Debugging
+
+El flag ````--inspect``` permite habilitar la depuración de nuestras aplicaciones con Node.js.
+
+Al habilitar dicho flag, ingresar a las herramientas de chrome para comenzar a visualizar logs, colocar breakpoints, etc.
+
+![image](https://user-images.githubusercontent.com/14263134/134816912-c627bcbf-8259-4104-8622-bfc57f459be6.png)
