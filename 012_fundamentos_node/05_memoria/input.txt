@@ -1,0 +1,6 @@
+soy 
+un texto
+en un archivo
+que 
+vamos
+a leer

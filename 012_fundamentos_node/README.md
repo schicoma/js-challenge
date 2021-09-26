@@ -75,3 +75,7 @@ Administrador de procesos para aplicaciones en Node.js, útil en ambientes de te
 ## Cómo maneja la asíncronía
 
 *[Ir al curso de Asíncronismo con JavaScript](../010_asincronismo_javascript)*
+
+## Stream y Buffer
+
+***Stream*** es una utilidad que permite el manejo y la administración de gran cantidad de datos. Utiliza los ***Buffers***, objeos que permiten guardar datos binarios en secuencia de bytes.
