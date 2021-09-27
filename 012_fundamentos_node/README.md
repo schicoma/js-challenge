@@ -72,6 +72,10 @@ Herramienta para ejecutar y recargar procesos de JavaScript; útil en desarrollo
 
 Administrador de procesos para aplicaciones en Node.js, útil en ambientes de test y/o producción.
 
+- **Puppeteer**
+
+Herramienta para realizar web scrapping.
+
 ## Cómo maneja la asíncronía
 
 *[Ir al curso de Asíncronismo con JavaScript](../010_asincronismo_javascript)*
