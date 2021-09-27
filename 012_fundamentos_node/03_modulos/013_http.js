@@ -14,7 +14,8 @@ function router(request, response) {
 
     switch(request.url) {
         case '/hola':
-            response.write('Hi, how are you?');
+            let saludo = hola();
+            response.write(saludo);
             response.end();
             break;
         default:
@@ -30,6 +31,10 @@ function router(request, response) {
     // body
     // response.write('Hi, I already know how to use HTTP module in Node.js');
     // response.end();
+}
+
+function hola() {
+    return 'Hi, how are you?';
 }
 
 console.log('Listening at port 3000');
