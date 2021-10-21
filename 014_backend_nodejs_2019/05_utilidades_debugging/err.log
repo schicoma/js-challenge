@@ -1,0 +1,16 @@
+Error: Upss !!!
+    at Timeout._onTimeout (/home/sebastian.chicoma/Documents/Projects/platzi/js-challenge/014_backend_nodejs_2019/05_utilidades_debugging/01_console_class.js:10:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+Error: Upss !!!
+    at Timeout._onTimeout (/home/sebastian.chicoma/Documents/Projects/platzi/js-challenge/014_backend_nodejs_2019/05_utilidades_debugging/01_console_class.js:10:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+Error: Upss !!!
+    at Timeout._onTimeout (/home/sebastian.chicoma/Documents/Projects/platzi/js-challenge/014_backend_nodejs_2019/05_utilidades_debugging/01_console_class.js:10:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+Error: Upss !!!
+    at Timeout._onTimeout (/home/sebastian.chicoma/Documents/Projects/platzi/js-challenge/014_backend_nodejs_2019/05_utilidades_debugging/01_console_class.js:10:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)

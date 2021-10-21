@@ -20,4 +20,20 @@ Mientras que en Node.js no tenemos un DOM ni un objeto windows, lo que sí tenem
 - stream
 - events
 
-## Arquitectura orientada a eventos 
+## Express.js
+
+Framework para crear **Web Apps**, **Web API's** o cualquier tipo de **Servicio Web**. Es muy liviano y minimalista; posibilidad de ser extensible a través de Middlewares.
+
+Un Middleware es como un interceptor, captan el request y el reponse para ejecutar una determinada acción sobre ellos.
+
+## API Restful
+
+REST (Representational State Transfer) es un estilo de arquitectura para construir servicios web. No es un estándar, pero sí una espcificación muy usada.
+
+Los tipos de peticiones que se utilizan con REST son:
+
+- GET (Consultas)
+- POST (Creación)
+- PUT (Reemplazo / Creación)
+- DELETE (Eliminación)
+- PATCH (Actualización)
