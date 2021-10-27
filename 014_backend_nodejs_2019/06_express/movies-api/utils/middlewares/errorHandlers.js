@@ -27,8 +27,8 @@ function errorHandler(error, request, response, next) {
     output: { statusCode, payload }
   } = error;
 
-  response.status(error.status || 500);
-  response.json(withErrorStack(error.message, error.stack));
+  response.status(statusCode);
+  response.json(withErrorStack(payload, error.stack));
 }
 
 module.exports = {
