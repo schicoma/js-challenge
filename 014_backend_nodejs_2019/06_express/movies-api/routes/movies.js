@@ -1,12 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 const MovieService = require('../services/MovieService');
 
 function moviesApi(app) {
   const router = express.Router();
 
-  app.use(bodyParser.json());
+  app.use(express.json());
   app.use('/api/movies', router);
 
   const movieService = new MovieService();
@@ -29,7 +29,7 @@ function moviesApi(app) {
   router.get('/:movieId', async function (request, response, next) {
     try {
       const { movieId } = request.params;
-      const movie = movieService.getMovie(movieId);
+      const movie = await movieService.getMovie(movieId);
 
       response.status(200).json({
         data: movie,
@@ -62,7 +62,7 @@ function moviesApi(app) {
       const { movieId } = request.params;
       const { body: movie } = request;
 
-      const updatedMovie = movieService.updateMovie(movieId, movie);
+      const updatedMovie = await movieService.updateMovie(movieId, movie);
 
       response.status(201).json({
         data: movieId,

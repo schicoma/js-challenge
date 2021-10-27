@@ -11,16 +11,6 @@
             "processId": "${command:PickProcess}",
             "restart": true,
             "protocol": "inspector"
-        },
-        {
-            "type": "pwa-node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/04_so_archivos.js/03_async_files.js"
-        },
-        
+        }
     ]
 }
