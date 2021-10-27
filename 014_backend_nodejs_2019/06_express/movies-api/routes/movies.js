@@ -1,12 +1,10 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
 
 const MovieService = require('../services/MovieService');
 
 function moviesApi(app) {
   const router = express.Router();
 
-  app.use(express.json());
   app.use('/api/movies', router);
 
   const movieService = new MovieService();
