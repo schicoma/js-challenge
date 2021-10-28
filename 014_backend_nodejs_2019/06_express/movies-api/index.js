@@ -5,14 +5,16 @@ const { config } = require('./config/index');
 const {logErrors, wrapErrors, errorHandler} = require('./utils/middlewares/errorHandlers');
 const notFoundHandler = require('./utils/middlewares/notFoundHandler');
 const moviesApi = require('./routes/movies');
+const morgan = require('morgan');
 
-app.use(express.json());
+app.use(morgan('dev')); // uso de logs en la app.
+app.use(express.json());;
 
 // routes
 moviesApi(app);
 
 // Capturar 404 error
-app.use(notFoundHandler);
+app.use(notFoundHandler)
 
 // los middlewares de error deben ir SIEMPRE al final
 app.use(logErrors);
