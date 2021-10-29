@@ -2,3 +2,5 @@
 **/react-base/
 **/build/
 014_backend_nodejs_2019/06_express/movies-api/.env
+014_backend_nodejs_2019/06_express/movies-api/.nyc_output/
+014_backend_nodejs_2019/06_express/movies-api/coverage/
