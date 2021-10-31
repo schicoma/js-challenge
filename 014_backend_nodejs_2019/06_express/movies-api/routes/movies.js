@@ -10,6 +10,9 @@ const {
 
 const validationHandler = require('../utils/middlewares/validationHandlers');
 
+const cacheResponse = require('../utils/cacheResponse');
+const { ONE_HOUR_IN_SECONDS, FIVE_MINUTES_IN_SECONDS } = require('../utils/times');
+
 function moviesApi(app) {
   const router = express.Router();
 
@@ -19,6 +22,10 @@ function moviesApi(app) {
 
   // Listar
   router.get('/', async function (request, response, next) {
+
+    cacheResponse(response, FIVE_MINUTES_IN_SECONDS);
+
+    // const { tag } = request.query;
     try {
       const movies = await movieService.getMovies();
 
