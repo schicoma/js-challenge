@@ -7,9 +7,9 @@ const productService = new ProductService();
 
 const router = express.Router();
 
-router.get('', (request, response) => {
+router.get('', async (request, response) => {
     // const { size: limit } = request.query;
-    const products = productService.find();
+    const products = await productService.find();
 
     response.json(products);
 });
@@ -18,10 +18,10 @@ router.get('/filter', (request, response) => {
     response.send('soy un filter');
 });
 
-router.get('/:id', (request, response) => {
+router.get('/:id', async (request, response) => {
     const { id } = request.params;
 
-    const product = productService.findOne(id)
+    const product = await productService.findOne(id)
 
     if (!product) {
         response.status(404).json({
@@ -33,10 +33,10 @@ router.get('/:id', (request, response) => {
 
 });
 
-router.post('', (request, response) => {
+router.post('', async (request, response) => {
     const body = request.body;
 
-    const newProduct = productService.create(body);
+    const newProduct = await productService.create(body);
 
     response.json({
         message: 'created',
@@ -44,28 +44,40 @@ router.post('', (request, response) => {
     });
 });
 
-router.patch('/:id', (request, response) => {
-    const { id } = request.params;
-    const body = request.body;
+router.patch('/:id', async (request, response) => {
+    try {
+        const { id } = request.params;
+        const body = request.body;
 
-    const updatedProduct = productService.update(id, body);
+        const updatedProduct = await productService.update(id, body);
 
-    response.json({
-        id,
-        message: 'updated',
-        data: updatedProduct
-    });
+        response.json({
+            id,
+            message: 'updated',
+            data: updatedProduct
+        });
+    } catch (e) {
+        response.status(404).json({
+            message: e.message
+        })
+    }
 });
 
-router.delete('/:id', (request, response) => {
-    const { id } = request.params;
+router.delete('/:id', async (request, response) => {
+    try {
+        const { id } = request.params;
 
-    productService.delete(id);
+        await productService.delete(id);
 
-    response.json({
-        id,
-        message: 'deleted'
-    });
+        response.json({
+            id,
+            message: 'deleted'
+        });
+    } catch (e) {
+        response.status(404).json({
+            message: e.message
+        })
+    }
 });
 
 module.exports = router;
