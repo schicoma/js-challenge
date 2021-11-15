@@ -2,20 +2,14 @@ const { response, request } = require('express');
 const express = require('express');
 const faker = require('faker');
 
+const ProductService = require('../services/product.service');
+const productService = new ProductService();
+
 const router = express.Router();
 
 router.get('', (request, response) => {
-    const { size: limit } = request.query;
-
-    const products = [];
-
-    for (let i = 0; i < (limit > 50 ? 50 : limit); i++) {
-        products.push({
-            name: faker.commerce.productName(),
-            price: parseInt(faker.commerce.price(), 10),
-            image: faker.image.imageUrl()
-        });
-    }
+    // const { size: limit } = request.query;
+    const products = productService.find();
 
     response.json(products);
 });
@@ -27,16 +21,14 @@ router.get('/filter', (request, response) => {
 router.get('/:id', (request, response) => {
     const { id } = request.params;
 
-    if (id === '999') {
+    const product = productService.findOne(id)
+
+    if (!product) {
         response.status(404).json({
             message: 'Not found'
         });
     } else {
-        response.status(200).json({
-            id: id,
-            name: 'Producto 1',
-            price: 2504
-        });
+        response.status(200).json(product);
     }
 
 });
@@ -44,24 +36,32 @@ router.get('/:id', (request, response) => {
 router.post('', (request, response) => {
     const body = request.body;
 
+    const newProduct = productService.create(body);
+
     response.json({
         message: 'created',
-        data: body
+        data: newProduct
     });
 });
 
 router.patch('/:id', (request, response) => {
     const { id } = request.params;
     const body = request.body;
+
+    const updatedProduct = productService.update(id, body);
+
     response.json({
         id,
         message: 'updated',
-        data: body
+        data: updatedProduct
     });
 });
 
 router.delete('/:id', (request, response) => {
     const { id } = request.params;
+
+    productService.delete(id);
+
     response.json({
         id,
         message: 'deleted'
