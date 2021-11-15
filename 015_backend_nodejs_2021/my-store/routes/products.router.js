@@ -1,3 +1,4 @@
+const { response, request } = require('express');
 const express = require('express');
 const faker = require('faker');
 
@@ -19,16 +20,51 @@ router.get('', (request, response) => {
     response.json(products);
 });
 
-router.get('/filter',  (request, response) => {
+router.get('/filter', (request, response) => {
     response.send('soy un filter');
 });
 
 router.get('/:id', (request, response) => {
     const { id } = request.params;
+
+    if (id === '999') {
+        response.status(404).json({
+            message: 'Not found'
+        });
+    } else {
+        response.status(200).json({
+            id: id,
+            name: 'Producto 1',
+            price: 2504
+        });
+    }
+
+});
+
+router.post('', (request, response) => {
+    const body = request.body;
+
     response.json({
-        id: id,
-        name: 'Producto 1',
-        price: 2504
+        message: 'created',
+        data: body
+    });
+});
+
+router.patch('/:id', (request, response) => {
+    const { id } = request.params;
+    const body = request.body;
+    response.json({
+        id,
+        message: 'updated',
+        data: body
+    });
+});
+
+router.delete('/:id', (request, response) => {
+    const { id } = request.params;
+    response.json({
+        id,
+        message: 'deleted'
     });
 });
 

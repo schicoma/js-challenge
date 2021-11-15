@@ -4,6 +4,8 @@ const faker = require('faker');
 const app = express();
 const port = 3131;
 
+app.use(express.json());
+
 const routerApi = require('./routes/index');
 
 app.get('/', (request, response) => {
