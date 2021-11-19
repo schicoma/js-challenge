@@ -18,17 +18,14 @@ router.get('/filter', (request, response) => {
     response.send('soy un filter');
 });
 
-router.get('/:id', async (request, response) => {
+router.get('/:id', async (request, response, next) => {
     const { id } = request.params;
 
-    const product = await productService.findOne(id)
-
-    if (!product) {
-        response.status(404).json({
-            message: 'Not found'
-        });
-    } else {
+    try {
+        const product = await productService.findOne(id);
         response.status(200).json(product);
+    } catch (e) {
+        next(e);
     }
 
 });
@@ -44,7 +41,7 @@ router.post('', async (request, response) => {
     });
 });
 
-router.patch('/:id', async (request, response) => {
+router.patch('/:id', async (request, response, next) => {
     try {
         const { id } = request.params;
         const body = request.body;
@@ -57,13 +54,11 @@ router.patch('/:id', async (request, response) => {
             data: updatedProduct
         });
     } catch (e) {
-        response.status(404).json({
-            message: e.message
-        })
+        next(e);
     }
 });
 
-router.delete('/:id', async (request, response) => {
+router.delete('/:id', async (request, response, next) => {
     try {
         const { id } = request.params;
 
@@ -74,9 +69,7 @@ router.delete('/:id', async (request, response) => {
             message: 'deleted'
         });
     } catch (e) {
-        response.status(404).json({
-            message: e.message
-        })
+        next(e);
     }
 });
 
