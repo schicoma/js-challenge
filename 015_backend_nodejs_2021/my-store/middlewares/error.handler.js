@@ -1,3 +1,5 @@
+// Middlewares de error: tienen 4 argumentos, el primero es el error
+
 function logErrors(error, request, response, next) {
     console.log('Sucedió un error');
     console.error(error);

@@ -55,7 +55,8 @@ class ProductService {
         const index = this.products.findIndex(product => product.id === id);
 
         if (index === -1) {
-            throw new Error('Product not found');
+            // throw new Error('Product not found'); // default error middleware
+            throw boom.notFound('Product not found in the app');
         }
 
         const product = this.products[index];
