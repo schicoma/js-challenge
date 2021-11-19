@@ -1,12 +1,15 @@
 const express = require('express');
-const faker = require('faker');
+const cors = require('cors');
 
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
 const app = express();
-const port = 3131;
+const port = process.env.PORT || 3131;
 
 app.use(express.json());
+app.use(cors({
+    origin: ['http://127.0.0.1:5500']
+}));
 
 const routerApi = require('./routes/index');
 
